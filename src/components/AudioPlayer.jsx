@@ -100,7 +100,7 @@ export default function AudioPlayer({ tracks, logo }) {
           sx={{ width: 150, height: 150, borderRadius: "50%" }}
         />
         <Box flexGrow={1}>
-          <Typography fontWeight="bold" fontSize={18}>
+          <Typography fontWeight="bold" fontSize={19}>
             {tracks[currentTrack].title}
           </Typography>
           <Typography fontSize={15}>{tracks[currentTrack].artist}</Typography>
@@ -118,7 +118,7 @@ export default function AudioPlayer({ tracks, logo }) {
               <SkipPrevious />
             </IconButton>
             <IconButton onClick={togglePlay} color="inherit">
-              {isPlaying ? <Pause /> : <PlayArrow />}
+              {isPlaying ? <Pause sx={{ fontSize: 30 }} /> : <PlayArrow sx={{ fontSize: 30 }} />}
             </IconButton>
             <IconButton
               onClick={() => playTrack((currentTrack + 1) % tracks.length)}
@@ -126,7 +126,7 @@ export default function AudioPlayer({ tracks, logo }) {
             >
               <SkipNext />
             </IconButton>
-            <Typography variant="caption">
+            <Typography variant="caption" fontSize={13}>
               {formatTime(currentTime)} / {formatTime(duration)}
             </Typography>
           </Stack>
@@ -177,24 +177,27 @@ export default function AudioPlayer({ tracks, logo }) {
               onClick={() => playTrack(index)}
               sx={{
                 color: isCurrent ? "#f44336" : "#fff",
-                borderBottom: "1px solid #222",
+                borderBottom: "1.5px solid #232323",
                 py: 0.25,
               }}
             >
               <ListItemIcon
                 sx={{ color: isCurrent ? "#f44336" : "#fff", minWidth: 36 }}
               >
-                {isTrackPlaying ? <Pause /> : <PlayArrow />}
+                {isTrackPlaying ? <Pause fontSize="small" /> : <PlayArrow fontSize="small" />}
               </ListItemIcon>
               <ListItemText
-                primary={track.title}
-                primaryTypographyProps={{
-                  fontSize: 14,
-                }}
+                primary={
+                  <Typography fontSize={15} fontWeight={isCurrent ? "bold" : "normal"}>
+                    {track.title}
+                  </Typography>
+                }
               />
               <Typography
                 variant="caption"
                 color={isCurrent ? "error" : "gray"}
+                fontSize={13}
+                fontWeight={isCurrent ? "bold" : "normal"}
               >
                 {track.duration}
               </Typography>

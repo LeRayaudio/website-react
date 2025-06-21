@@ -44,11 +44,11 @@ function App() {
         sx={{
           pl: { xs: 2, md: 10 },
           pr: { xs: 2, md: 10 },
-          mb: 4,
+          my: 4,
           textAlign: "center",
         }}
       >
-        <Grid container justifyContent="flex-end" alignItems="center" sx={{ pr: '80px' }}>
+        <Grid container justifyContent="flex-end" alignItems="center" sx={{ pr: '80px'}}>
           <Box component="img"
             src="/logos/Ryan Allam Logo.png"
             alt="Logo"
@@ -57,7 +57,7 @@ function App() {
           <Box component="img"
             src="/logos/Ryan Allam Logo_name.png"
             alt="Logo Name"
-            sx={{ width: '15%' }}
+            sx={{ width: '16%' }}
           />
         </Grid>
       </Container>
