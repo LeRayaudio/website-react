@@ -6,7 +6,7 @@ import AudioPlayer from './components/AudioPlayer';
 import { adamSongs, coffeSongs, credits, kennedySongs, panisSongs, podcasts } from './data';
 
 
-function Section({ title, children }) {
+function Section({ title,  children }) {
   return (
 <Container sx={{ pl: 1, pr: 1, mb: 4 }}>
   <Box sx={{ pt: 3 }}>
