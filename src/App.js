@@ -4,6 +4,7 @@ import './App.css';
 import { theme } from './theme';
 import AudioPlayer from './components/AudioPlayer';
 import { adamSongs, coffeSongs, credits, kennedySongs, panisSongs, podcasts } from './data';
+import CreditsSection from './components/CreditsSection';
 
 
 function Section({ title, children }) {
@@ -61,29 +62,13 @@ function App() {
           />
         </Grid>
       </Container>
-
+      
       <Section title="Selected Credits">
         <Grid container spacing={2} justifyContent="center">
-          {credits.map((src, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Box
-                component="img"
-                src={`/pics/${src}`}
-                alt={`Credit ${i + 1}`}
-                sx={{
-                  width: '100%',
-                  maxWidth: { xs: 280, sm: 300, md: 350 },
-                  height: 'auto',
-                  borderRadius: 1,
-                  display: 'block',
-                  px: 1
-                }}
-              />
-            </Grid>
-          ))}
+          <CreditsSection />
+
         </Grid>
       </Section>
-
 
       {/* About */}
       <Section title="About">

@@ -32,16 +32,102 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.credit-box { position: relative; overflow: hidden; cursor: zoom-in; }
-.credit-img { width: 100%; transition: transform .3s ease; }
-.credit-box:hover .credit-img { transform: scale(1.05); }
+.credit-box {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.credit-img {
+  width: 100%;
+  transition: transform .3s ease;
+}
+
+.credit-box:hover .credit-img {
+  transform: scale(1.05);
+}
+
 .zoom-overlay {
-  position: absolute; bottom: 8px; left: 8px;
-  background: rgba(0,0,0,0.6); color: white; padding: 2px 6px;
-  font-size: 0.8em; border-radius: 4px;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  border-radius: 4px;
+}
+
+.credit-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.credit-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 5; 
+}
+
+.credit-item:hover img {
+  filter: blur(3px);
+}
+
+.credit-item:hover .dark-overlay {
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.hover-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 10;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #000;
+  box-sizing: border-box;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.credit-item:hover .hover-info {
+  opacity: 1;
+}
+
+.hover-info .title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.hover-info .details {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
 }

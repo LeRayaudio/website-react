@@ -143,3 +143,50 @@ export const coffeSongs = [
     otherInfo: "Cash (Bonus Track)"
   }, 
 ]
+export const imdbData ={
+  "DEN OF THIEVES 2.png": {
+    "title": "Den of Thieves 2: Pantera",
+    "director": "Christian Gudegast",
+    "job": "Sound Effects Editor"
+  },
+  "FROM.png": {
+    "title": "From (TV Series)",
+    "director": "Various",
+    "job": "Sound Editor (20 episodes)"
+  },
+  "PRISCILLA.png": {
+    "title": "Priscilla",
+    "director": "Sofia Coppola",
+    "job": "Sound Effects Editor"
+  },
+  "THE CONSULTANT.png": {
+    "title": "The Consultant (TV Series)",
+    "director": "Various",
+    "job": "Sound Effects Editor (8 episodes)"
+  },
+  "THE NUTCRACKERS.png": {
+    "title": "The Nutcrackers",
+    "director": "Christian Tremblay",
+    "job": "Sound Effects Editor"
+  },
+  "CHAPELWAITE.jpg": {
+    "title": "Chapelwaite (TV Series)",
+    "director": "Various",
+    "job": "1st Assistant Sound Editor (10 episodes)"
+  },
+  "BILLY.jpg": {
+    "title": "Billy the Kid (TV Series)",
+    "director": "Various",
+    "job": "1st Assistant Sound Editor (8 episodes)"
+  },
+  "GEORGETOWN.png": {
+    "title": "Georgetown",
+    "director": "Christoph Waltz",
+    "job": "Sound Effects Editor"
+  },
+  "DUAL.jpg": {
+    "title": "Dual",
+    "director": "Riley Stearns",
+    "job": "Sound Effects Editor"
+  }
+}
