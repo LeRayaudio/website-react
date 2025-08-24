@@ -1,6 +1,14 @@
 export const credits = [
-  'DEN OF THIEVES 2.png', 'FROM.png', 'PRISCILLA.png', 'THE CONSULTANT.png',
-  'THE NUTCRACKERS.png', 'CHAPELWAITE.jpg', 'BILLY.jpg', 'GEORGETOWN.png', 'DUAL.jpg'
+  'A Big Bold Beautiful Journey.webp',
+  'DEN OF THIEVES 2.png', 
+  'FROM.png', 
+  'PRISCILLA.png', 
+  'THE CONSULTANT.png',
+  'THE NUTCRACKERS.png', 
+  'CHAPELWAITE.jpg', 
+  'BILLY.jpg', 
+  // 'GEORGETOWN.png', 
+  'DUAL.jpg'
 ];
 
 export const podcasts = [
@@ -144,6 +152,11 @@ export const coffeSongs = [
   }, 
 ]
 export const imdbData ={
+  "A Big Bold Beautiful Journey.webp": {
+    "title": "A Big Bold Beautiful Journey",
+    "director": "Kogonada",
+    "job": "Sound Effects Editor"
+  },
   "DEN OF THIEVES 2.png": {
     "title": "Den of Thieves 2: Pantera",
     "director": "Christian Gudegast",

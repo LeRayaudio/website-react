@@ -5,11 +5,12 @@ import { theme } from './theme';
 import AudioPlayer from './components/AudioPlayer';
 import { adamSongs, coffeSongs, credits, kennedySongs, panisSongs, podcasts } from './data';
 import CreditsSection from './components/CreditsSection';
+import HeaderNav, { Navbar } from './components/HeaderNav';
 
 
-function Section({ title, children }) {
+function Section({ id, title, children }) {
   return (
-    <Container sx={{ pl: 1, pr: 1, mb: 4 }}>
+    <Container id={id} sx={{ pl: 1, pr: 1, mb: 4 }}>
       <Box sx={{ pt: 3 }}>
         <Typography
           variant="h5"
@@ -41,7 +42,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       {/* Header */}
-      <Container
+      {/* <Container
         sx={{
           pl: { xs: 2, md: 10 },
           pr: { xs: 2, md: 10 },
@@ -61,9 +62,10 @@ function App() {
             sx={{ width: '16%' }}
           />
         </Grid>
-      </Container>
+      </Container> */}
+      <HeaderNav />
       
-      <Section title="Selected Credits">
+      <Section id="selected-credits" title="Selected Credits">
         <Grid container spacing={2} justifyContent="center">
           <CreditsSection />
 
@@ -71,7 +73,7 @@ function App() {
       </Section>
 
       {/* About */}
-      <Section title="About">
+      <Section id="about" title="About">
         <Box
           sx={{
             display: 'flex',
@@ -105,7 +107,7 @@ function App() {
 
 
       {/* Podcasts */}
-      <Section title="Podcasts">
+      <Section id="podcasts" title="Podcasts">
         <Box
           sx={{
             display: 'flex',
@@ -131,7 +133,7 @@ function App() {
 
 
       {/* Mixing */}
-      <Section title="Mixing">
+      <Section id="mixing" title="Mixing">
         <Typography sx={{ textAlign: 'justify', mb: 2, px: 1 }} >
           In my constant quest to better myself, I joined Berklee College of Music to study Music Theory in 2013, followed by Mixing and Mastering in 2014, at which time I started mixing demo albums.
         </Typography>
@@ -143,7 +145,7 @@ function App() {
       </Section>
 
       {/* Contact */}
-      <Section title="Contact">
+      <Section id="contact" title="Contact">
         <Typography>
           Do you have any question? Or just thinking about a project? Drop me a line at {" "}
           <Box

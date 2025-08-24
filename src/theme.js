@@ -13,7 +13,7 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'Helvetica, Arial, sans-serif',
+    fontFamily: "Montserrat, sans-serif",
     h4: {
       fontWeight: 700,
     },
